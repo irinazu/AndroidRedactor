@@ -1,0 +1,358 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:weightSum="1"
+        android:layout_width="match_parent"
+        android:layout_height="170dp"
+        android:layout_weight="0.1"
+        android:orientation="horizontal"
+        >
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="40dp"
+                    android:layout_height="wrap_content"
+                    android:text="Line"
+                    android:textSize="20dp"
+                    >
+
+                </TextView>
+                <Button
+                    android:id="@+id/edge"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="10dp">
+
+                </Button>
+                <EditText
+                    android:id="@+id/inputEdge"
+                    android:layout_width="30dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:textSize="20dp"
+                    >
+
+                </EditText>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="40dp"
+                    android:layout_height="wrap_content"
+                    android:text="Fill"
+                    android:textSize="20dp"
+                    >
+
+                </TextView>
+                <Button
+                    android:id="@+id/fill"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="10dp">
+
+                </Button>
+                <Button
+                    android:id="@+id/delete"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Delete"
+                    android:layout_marginLeft="10dp"
+                    >
+                </Button>
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/segmentLayout"
+            android:layout_width="match_parent"
+            android:layout_height="170dp"
+            android:orientation="horizontal"
+           >
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginLeft="10dp">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Begin:X"
+                        android:textSize="20dp"
+                        >
+                    </TextView>
+                    <EditText
+                        android:id="@+id/XBeginPoint"
+                        android:layout_width="50dp"
+                        android:layout_height="wrap_content"
+                        android:textSize="20dp"
+                        >
+
+                    </EditText>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Begin:Y"
+                        android:textSize="20dp"
+                        >
+                    </TextView>
+                    <EditText
+                    android:id="@+id/YBeginPoint"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:textSize="20dp"
+                    >
+                </EditText>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="170dp"
+                android:orientation="vertical"
+                android:layout_marginLeft="10dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="End:X"
+                    android:textSize="20dp"
+                    >
+                </TextView>
+                <EditText
+                    android:id="@+id/XEndPoint"
+                    android:layout_height="wrap_content"
+                    android:textSize="20dp"
+                    android:layout_width="50dp"
+
+                    >
+                </EditText>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="End:Y"
+                    android:textSize="20dp"
+                    >
+                </TextView>
+                <EditText
+                android:id="@+id/YEndPoint"
+                android:layout_height="wrap_content"
+                android:textSize="20dp"
+                android:layout_width="50dp"
+
+                >
+            </EditText>
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:visibility="gone"
+            android:id="@+id/circleLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="O:X"
+                android:textSize="20dp"
+
+                >
+            </TextView>
+            <EditText
+                android:id="@+id/XCenterPoint"
+                android:layout_height="wrap_content"
+                android:textSize="20dp"
+                android:layout_width="50dp"
+
+                >
+
+            </EditText>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="O:Y"
+                android:textSize="20dp"
+
+                >
+            </TextView>
+            <EditText
+                android:id="@+id/YCenterPoint"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:textSize="20dp"
+                >
+
+            </EditText>
+
+        </LinearLayout>
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Radius"
+                android:textSize="20dp"
+
+                >
+            </TextView><EditText
+                android:id="@+id/Radius"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:textSize="20dp"
+                >
+
+            </EditText>
+        </LinearLayout>
+
+        <LinearLayout
+            android:visibility="gone"
+            android:id="@+id/rectangleLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginLeft="10dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="X"
+                    android:textSize="20dp"
+
+                    >
+                </TextView>
+                <EditText
+                    android:id="@+id/LeftCornerXPoint"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:textSize="20dp"
+                    >
+                </EditText>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Y"
+                    android:textSize="20dp"
+
+                    >
+                </TextView>
+                <EditText
+                android:id="@+id/LeftCornerYPoint"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:textSize="20dp"
+                >
+            </EditText>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginLeft="10dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Height"
+                    android:textSize="20dp"
+
+                    >
+                </TextView>
+                <EditText
+                    android:id="@+id/Height"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:textSize="20dp"
+                    >
+                </EditText>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Width"
+                    android:textSize="20dp"
+
+                    >
+                </TextView>
+                <EditText
+                android:id="@+id/Width"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:textSize="20dp"
+                >
+            </EditText>
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/redactorLayout"
+        android:weightSum="1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="0.8"
+        >
+    <com.example.redactor.CustomCanvas
+        android:id="@+id/redactor"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    </com.example.redactor.CustomCanvas>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        >
+
+        <Button
+            android:id="@+id/segmentCanvas"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:enabled="false"
+            android:text="Segment">
+        </Button>
+        <Button
+            android:id="@+id/circleCanvas"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Circle">
+        </Button>
+        <Button
+            android:id="@+id/rectangleCanvas"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Rectangle">
+        </Button>
+        <Button
+            android:id="@+id/save"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="S">
+
+        </Button>
+    </LinearLayout>
+
+
+</LinearLayout>
